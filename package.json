@@ -1,0 +1,25 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "A todo list app used to practice ES6 and webpack",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaron-contreras/todo-list.git"
+  },
+  "author": "Aaron Contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaron-contreras/todo-list/issues"
+  },
+  "homepage": "https://github.com/aaron-contreras/todo-list#readme",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
