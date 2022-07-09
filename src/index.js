@@ -1,4 +1,4 @@
-import TodoItem from './todoItem';
+import TodoItem from './factories/todoItem';
 
 function component() {
   const element = document.createElement('div');
