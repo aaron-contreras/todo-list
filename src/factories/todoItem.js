@@ -1,6 +1,6 @@
 const DefaultProjectName = "Default";
 
-const TodoItem = ({ title, description, dueDate, priority, projectName=DefaultProjectName }) => {
+const createTodoItem = ({ title, description, dueDate, priority, projectName=DefaultProjectName }) => {
 	const belongsToProjectName = function(projectName) {
 		return this.projectName === projectName;
 	};

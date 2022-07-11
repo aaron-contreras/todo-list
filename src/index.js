@@ -13,10 +13,10 @@ function component() {
 
 document.body.appendChild(component());
 
-const todoItems = todoItemsAttributes.map( (attributes) => TodoItem(attributes));
+const todoItems = todoItemsAttributes.map( (attributes) => createTodoItem(attributes));
 console.dir(todoItems);
 
-const projects = projectsAttributes.map( (attributes) => Project(attributes) );
+const projects = projectsAttributes.map( (attributes) => createProject(attributes) );
 console.dir(projects);
 
 projects.forEach((project) => {
