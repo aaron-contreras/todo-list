@@ -3,8 +3,6 @@ const createProject = ({ name, todoItems=[] }) => {
 		this.todoItems = todoItems.filter((todoItem) => {
 			return todoItem.belongsToProjectName(this.name);
 		});
-
-		console.log(this.todoItems);
 	};
 
 	return {
