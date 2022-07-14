@@ -1,7 +1,7 @@
 import todoItemsAttributes from './dummy-data/todoItems';
-import TodoItem from './factories/todoItem';
+import createTodoItem from './factories/todoItem';
 import projectsAttributes from './dummy-data/projects';
-import Project from './factories/project';
+import createProject from './factories/project';
 
 function component() {
   const element = document.createElement('div');

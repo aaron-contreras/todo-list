@@ -15,4 +15,4 @@ const createTodoItem = ({ title, description, dueDate, priority, projectName=Def
 	};
 };
 
-export default TodoItem;
+export default createTodoItem;

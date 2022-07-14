@@ -12,4 +12,4 @@ const createProject = ({ name, todoItems=[] }) => {
 	};
 };
 
-export default Project;
+export default createProject;
