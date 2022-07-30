@@ -1,18 +1,10 @@
-const DefaultProjectName = "Default";
-
-const createTodoItem = ({ title, description, dueDate, priority, projectName=DefaultProjectName }) => {
-	const belongsToProjectName = function(projectName) {
-		return this.projectName === projectName;
-	};
-
+const todoItemFactory = ({ title, description, dueDate, priority }) => {
 	return {
-		projectName,
 		title,
 		description,
 		dueDate,
 		priority,
-		belongsToProjectName,
 	};
 };
 
-export default createTodoItem;
+export default todoItemFactory;

@@ -1,14 +1,12 @@
 const createProject = ({ name, todoItems=[] }) => {
-	const populateWithBelongingTodoItems = function(todoItems) {
-		this.todoItems = todoItems.filter((todoItem) => {
-			return todoItem.belongsToProjectName(this.name);
-		});
-	};
+	const addTodoItem = function(todoItem) {
+		this.todoItems.push(todoItem);
+	}
 
 	return {
 		name,
 		todoItems,
-		populateWithBelongingTodoItems,
+		addTodoItem,
 	};
 };
 

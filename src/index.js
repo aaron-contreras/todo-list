@@ -1,7 +1,8 @@
 import todoItemsAttributes from './dummy-data/todoItems';
-import createTodoItem from './factories/todoItem';
-import projectsAttributes from './dummy-data/projects';
+import todoItemFactory from './factories/todoItem';
+import { projectsAttributes } from './dummy-data/projects';
 import createProject from './factories/project';
+import addTodoItem from './use-cases/addTodoItem';
 
 function component() {
   const element = document.createElement('div');
@@ -13,13 +14,20 @@ function component() {
 
 document.body.appendChild(component());
 
-const todoItems = todoItemsAttributes.map( (attributes) => createTodoItem(attributes));
-console.dir(todoItems);
-
+// Set up dummy projects
 const projects = projectsAttributes.map( (attributes) => createProject(attributes) );
 console.dir(projects);
 
-projects.forEach((project) => {
-  project.populateWithBelongingTodoItems(todoItems);
-});
+const firstTodoItemAttributes = {
+  todoItemAttributes: todoItemsAttributes[0],
+  project: projects[1]
+};
+
+const secondTodoItemAttributes = {
+  todoItemAttributes: todoItemsAttributes[1],
+  project: projects[0]
+};
+
+addTodoItem(firstTodoItemAttributes);
+addTodoItem(secondTodoItemAttributes);
 console.dir(projects);

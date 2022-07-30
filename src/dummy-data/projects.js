@@ -1,12 +1,12 @@
-import todoItemsAttributes from './todoItems';
+const defaultProjectName = 'Default';
 
 const projectsAttributes = [
 	{
-		name: 'Default',
+		name: defaultProjectName,
 	},
 	{
 		name: 'Data Structures Final Project',
 	}
 ];
 
-export default projectsAttributes;
+export { defaultProjectName, projectsAttributes };
