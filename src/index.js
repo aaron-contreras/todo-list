@@ -3,6 +3,7 @@ import todoItemFactory from './factories/todoItem';
 import { projectsAttributes } from './dummy-data/projects';
 import createProject from './factories/project';
 import addTodoItem from './use-cases/addTodoItem';
+import deleteTodoItem from './use-cases/deleteTodoItem';
 
 function component() {
   const element = document.createElement('div');
@@ -15,7 +16,7 @@ function component() {
 document.body.appendChild(component());
 
 // Set up dummy projects
-const projects = projectsAttributes.map( (attributes) => createProject(attributes) );
+let projects = projectsAttributes.map( (attributes) => createProject(attributes) );
 console.dir(projects);
 
 const firstTodoItemAttributes = {
@@ -30,4 +31,7 @@ const secondTodoItemAttributes = {
 
 addTodoItem(firstTodoItemAttributes);
 addTodoItem(secondTodoItemAttributes);
+console.dir(projects);
+
+projects[0].todoItems = deleteTodoItem({project: projects[0], todoItem: projects[0].todoItems[0]});
 console.dir(projects);

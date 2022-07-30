@@ -1,7 +1,7 @@
 import createTodoItem from '../factories/todoItem';
 
 const addTodoItem = ({ project, todoItemAttributes }) => {
-	const todoItem = createTodoItem(Object.assign(todoItemAttributes, { projectName: project.name }));
+	const todoItem = createTodoItem(todoItemAttributes);
 
 	project.addTodoItem(todoItem);
 };
